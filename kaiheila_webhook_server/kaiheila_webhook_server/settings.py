@@ -35,7 +35,8 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
-	'webhook_server'
+	'webhook_server',
+	'MOD'
 ]
 
 MIDDLEWARE = [

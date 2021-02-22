@@ -1,14 +1,15 @@
 import json
 import zlib
 
+import sys, os
 import sys
-from route import *
+
+from MOD.route import *
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
 
-sys.path.append("..")
+# Create your views here.
 
 
 def wh_server(request):
@@ -31,9 +32,9 @@ def wh_server(request):
 			# print((server_post_message_disc))整个消息块
 			print("接收到非验证消息，消息序列为:" + str(server_post_message_disc['sn']))
 			print("消息内容为")
-			print((server_post_message_disc["d"]))
+			print(server_post_message_disc)
 			ready_message_data(server_post_message_disc)
-			return HttpResponse(json.dumps(_push_data))
+			return HttpResponse("json.dumps(_push_data)")
 
 	else:
 		print("接收到网页端GET请求，已经回执页面")
