@@ -14,4 +14,4 @@
 
 使用方法：
 
-修改client.py中的Authorization变量为你自己的机器人websocket token，并执行client.py即可
+修改config.ini中的各项变量，并执行client.py即可
